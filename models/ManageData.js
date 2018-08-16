@@ -9,8 +9,8 @@ var Types = keystone.Field.Types;
 var ManageData = new keystone.List('ManageData');
 
 ManageData.add({
-  itemId: { type: String, unique: true },
-  sessionId: { type: String },
+	itemId: { type: String, unique: true },
+	sessionId: { type: String },
 });
 
 ManageData.register();

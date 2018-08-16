@@ -32,6 +32,7 @@ keystone.pre('session', function (req, res, next) {
 	var sessionId = req.signedCookies['keystone.uid']
 
 	var ManageData = keystone.list('ManageData')
+	var Post = keystone.list('Post')
 
 	ManageData.model.findOne({ itemId }).exec((err, data) => {
 		if (err) {
@@ -45,7 +46,7 @@ keystone.pre('session', function (req, res, next) {
 		}
 
 		if (data.sessionId !== 1234) {
-			
+		
 		}
 
 
